@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :edit, :update, :show]
   resources :favourites, only: [:create, :destroy, :show]
   root to: 'sessions#new'
-  resources :picturess do
+  resources :pictures do
     collection do
       post :confirm
     end
